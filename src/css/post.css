@@ -34,4 +34,9 @@
     margin: 5px 0;
     font-weight: bold;
   }
-  
+  .post-delete{
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+  }
