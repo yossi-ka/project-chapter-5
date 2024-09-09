@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Todo from "./Todo";
 import SortTodos from "./SortTodos";
-
+import { useNavigate } from "react-router-dom";
 function Todos() {
+  const navigate = useNavigate();
   const userId = JSON.parse(localStorage.getItem("user")).id;
   const [todos, setTodos] = useState([]);
 
@@ -22,6 +23,7 @@ function Todos() {
     <>
       <div className="sort">
         <h1>Todos List:</h1>
+        <button style={{width:"150px"}} onClick={() => navigate("/todos/addtodo")}>+ Add Task</button>
         <SortTodos todos={todos} setTodos={setTodos} />
       </div>
       {todos.map((todo) => (

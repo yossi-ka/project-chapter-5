@@ -18,7 +18,9 @@ function Navber() {
             Logout
           </a>
         </div>
-     {localStorage.getItem("user") &&   <h1>Hi there {JSON.parse(localStorage.getItem("user")).name}!</h1>}
+        {localStorage.getItem("user") && (
+          <h1>Hi there {JSON.parse(localStorage.getItem("user")).name}!</h1>
+        )}
         <div className="btn2">
           <Link to="/profile" className="btn profile">
             Profile
@@ -29,7 +31,7 @@ function Navber() {
           <Link to="/albums" className="btn albums">
             Albums
           </Link>
-          <Link to="/posts" className="btn posts">
+          <Link to="/posts/myposts" className="btn posts">
             Posts
           </Link>
         </div>

@@ -48,6 +48,7 @@ function SortTodos({ setTodos }) {
   return (
     <>
       <div className="sort-container">
+        <h3>Sort by: </h3>
         <select onChange={sort} name="" id="">
           <option className="op" value="All">
             All
