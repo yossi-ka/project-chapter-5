@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Todo from "./Todo";
 import SortTodos from "./SortTodos";
 import { useNavigate } from "react-router-dom";
+import SearchTodo from "./SearchTodo";
 function Todos() {
   const navigate = useNavigate();
   const userId = JSON.parse(localStorage.getItem("user")).id;
@@ -22,13 +23,33 @@ function Todos() {
   return (
     <>
       <div className="sort">
-        <h1>Todos List:</h1>
-        <button style={{width:"150px"}} onClick={() => navigate("/todos/addtodo")}>+ Add Task</button>
+        <button
+          style={{ width: "150px" }}
+          onClick={() => navigate("/todos/addtodo")}
+        >
+          + Add Task
+        </button >
+        <SearchTodo todos={todos} setTodos={setTodos} />
         <SortTodos todos={todos} setTodos={setTodos} />
       </div>
-      {todos.map((todo) => (
-        <Todo key={todo.id} {...todo} onUpdate={handleTodoUpdate} />
-      ))}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {todos.map((todo) => (
+          <Todo
+            key={todo.id}
+            {...todo}
+            onUpdate={handleTodoUpdate}
+            todos={todos}
+            setTodos={setTodos}
+          />
+        ))}
+      </div>
     </>
   );
 }

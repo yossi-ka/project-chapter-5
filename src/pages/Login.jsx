@@ -36,11 +36,11 @@ function Login() {
     <>
       <div className="login-container">
         <form className="login-box" onSubmit={submitHandler}>
-          <label htmlFor="username">Enter your username</label>
+          <label className="inpus-user" htmlFor="username">Enter your username</label>
           <input ref={usernameRef} type="text" id="username" />
-          <label htmlFor="password">Enter your password</label>
+          <label className="inpus-user" htmlFor="password">Enter your password</label>
           <input ref={passwordRef} type="password" id="password" />
-          <button>Ok, Let's go..</button>
+          <button className="log-button">Ok, Let's go..</button>
         </form>
         <p className="register-link">
           Don't have an account? <Link to="/register">Register</Link>

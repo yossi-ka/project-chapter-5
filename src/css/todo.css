@@ -1,6 +1,7 @@
 /* todo.css */
 .todo-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
   margin: 10px;
@@ -8,9 +9,11 @@
   background-color: #f5f5f5;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease, background-color 0.3s ease;
+  width: 700px;
+  align-items: center;
 }
 
-.todo-container.complete {
+.todo-container.complete h1 {
   opacity: 0.5;
   text-decoration: line-through;
   background-color: #d3d3d3;
@@ -35,9 +38,17 @@
 .sort {
   display: flex;
   justify-content: space-between;
-  margin:0px 35px;
+  margin: 0px 35px;
   align-items: center;
 }
 .sort h1 {
   font-size: 30px;
+}
+.op {
+  cursor: pointer;
+}
+.todoOptions {
+  display: flex;
+  align-items: center;
+  justify-content:center
 }

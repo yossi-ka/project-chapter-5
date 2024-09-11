@@ -1,0 +1,85 @@
+.showPost-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-id {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .post-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .post-body {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .post-user {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .post-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .edit, .delete {
+    font-size: 18px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .edit {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .edit:hover {
+    background-color: #0056b3;
+  }
+  
+  .delete {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  .delete:hover {
+    background-color: #cc0000;
+  }
+  
+  button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  

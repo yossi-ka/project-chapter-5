@@ -6,7 +6,7 @@ function Navber() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="navbar-container">
+      <div className="navbar-container" >
         <div className="btn1">
           <a
             className="btn logout"

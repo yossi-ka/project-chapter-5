@@ -1,3 +1,5 @@
+// json-server --watch db.json --port 8000
+
 import "./App.css";
 import Login from "./pages/Login";
 import { createContext, useState } from "react";
@@ -14,6 +16,11 @@ import AddTodo from "./pages/AddTodo";
 import ShowPost from "./pages/ShowPost";
 import NewPost from "./pages/NewPost";
 import ShowAlbum from "./pages/ShowAlbum";
+import EditTodo from "./pages/EditTodo";
+import EditPost from "./pages/EditPost";
+import EditComment from "./pages/EditComment";
+import AddComment from "./pages/AddComment";
+import AddAlbum from "./pages/AddAlbum";
 
 export const userContext = createContext();
 
@@ -34,10 +41,19 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/todos" element={<Todos />} />
               <Route path="/todos/addtodo" element={<AddTodo />} />
+              <Route path="/todos/:id/edit" element={<EditTodo />} />
               <Route path="/albums" element={<Albums />} />
               <Route path="/albums/:id" element={<ShowAlbum />} />
+              <Route path="/albums/add" element={<AddAlbum />} />
               <Route path="/posts/myposts" element={<Posts />} />
               <Route path="/posts/myposts/:id" element={<ShowPost />} />
+              <Route path="/posts/myposts/:id/comments/:commId/edit" element={<EditComment />} />
+              <Route path="/posts/myposts/:id/comments/new" element={<AddComment />} />
+              <Route
+                path="/posts/myposts/:id/comments"
+                element={<ShowPost />}
+              />
+              <Route path="/posts/myposts/:id/edit" element={<EditPost />} />
               <Route path="/posts/myposts/new" element={<NewPost />} />
             </Route>
             <Route path="*" element={<h1>😳 PAGE NOT FOUND</h1>} />

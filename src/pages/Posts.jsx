@@ -16,9 +16,16 @@ function Posts() {
       .then((data) => setPosts(data));
   }, []);
 
+  const handleAll = () => {
+    fetch("http://localhost:8000/posts")
+      .then((res) => res.json())
+      .then((data) => setPosts(data));
+  };
+
   return (
     <>
       <PostsOptions posts={posts} setPosts={setPosts} />
+      <button onClick={handleAll}>Show all posts</button>
       <div className="posts-grid">
         {!posts ? (
           <>loading...</>
